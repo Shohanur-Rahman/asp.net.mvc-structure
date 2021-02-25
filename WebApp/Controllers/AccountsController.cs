@@ -26,6 +26,7 @@ namespace WebApp.Controllers
         public ActionResult Register()
         {
             var users = _repository.GetUsers();
+            ViewBag.Users = users.Data;
             return View();
         }
 

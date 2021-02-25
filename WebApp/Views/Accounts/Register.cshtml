@@ -21,6 +21,10 @@
                         @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @id = "txtName", @required = "true" })
                     </div>
                     <div class="form-group">
+                        <lable class="control-label">Name</lable>
+                        @Html.DropDownListFor(m => m.CreatedBy, new SelectList(ViewBag.Users, "Id", "Name"), new { @class="form-control"})
+                    </div>
+                    <div class="form-group">
                         <lable class="control-label">Email</lable>
                         @Html.TextBoxFor(m => m.Email, new { @type = "email", @class = "form-control", @id = "txtEmail", @required = "true" })
                     </div>

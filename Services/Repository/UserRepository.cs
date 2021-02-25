@@ -63,6 +63,7 @@ namespace Services.Repository
             {
                 var existingUser = _context.USER.ToList();
 
+                result.Data = existingUser;
                 result.IsSuccess = true;
                 result.Message = BusinessMessage.SUCCESS;
 
